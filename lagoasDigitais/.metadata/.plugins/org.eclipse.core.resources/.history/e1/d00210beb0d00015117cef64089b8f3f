@@ -1,0 +1,26 @@
+package exercicio1;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class Teste {
+	public static void main(String[] args) {
+		for (int i = 1000; i < 2000; i++) {
+			if(i % 11 == 5)
+				System.out.println(i);
+		}
+	}
+
+	public static int divisao(int x, int y) {
+		// a recursividade é interrompida quando y for igual a 0
+		Scanner entrada = new Scanner(System.in);
+		if (y == 0) {
+			System.out.println("Digite um número: ");
+			y = entrada.nextInt();
+			return divisao(x, y);
+		} else {
+			return x / y; // efetua uma nova chamada recursiva
+		}
+	}
+}
